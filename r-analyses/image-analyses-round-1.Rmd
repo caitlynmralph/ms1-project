@@ -1,0 +1,143 @@
+---
+title: "Instagram Image Analyses: Round 1"
+author: "caitlyn ralph"
+date: "3/5/2019"
+output: 
+  html_document:
+    theme: paper
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Introduction
+
+These are some initial analyses of the images from the 1975's <a href="https://www.instagram.com/the1975/">Instagram</a>. Shout out to my co-worker Amber Thomas for the starter code here.
+
+**What's inside**
+
+- Section 1: Test with one image
+- Section 2: Find colors function
+- Section 3: Apply find colors function to each image
+- Section 4: Upload color results
+- Section 5: Convert to RGB
+- Section 6: Select RGB column
+- Section 7: Convert to HSV
+- Section 8: Dot plot based on hue
+- Section 9: Color Quantization on Most-Liked Image
+
+#### Packages
+```{r message = FALSE}
+library(tidyverse)
+library(here)
+library(paletter)
+library(RImagePalette)
+library(RColorBrewer)
+library(plotly)
+library(imager)
+library(grid)
+library(gridExtra)
+```
+
+# ```{r section1}
+# imagePath <- here::here("sample", "the1975_30589889_211585886283959_2385693426273222656_n.jpg")
+# imgMatrix <- readJPEG(imagePath)
+# pal <- image_palette(imgMatrix, n = 3)
+# scales::show_col(pal)
+# ```
+# 
+# ```{r section2, results=FALSE}
+# 
+# findColors <- function(fileName){
+#   # imgPath <- here::here("sample",fileName)
+#   imgMatrix <- readJPEG(fileName)
+#   imgPalette <- image_palette(imgMatrix, n = 1)
+# 
+#   filePath <- here::here("processed-data", "colors.csv")
+# 
+#   write.table(imgPalette, file = filePath, row.names = FALSE, append = TRUE, sep = ",", col.names = !file.exists(filePath))
+#     
+# }
+# ```
+# 
+# ```{r section3, results=FALSE}
+# filePath <- here::here("sample")
+# files <- list.files(path=filePath, pattern="*.jpg", full.names=TRUE, recursive=FALSE)
+# lapply(files, findColors)
+# ```
+
+```{r section4}
+colors <- read.csv(here::here("processed-data", "colors.csv"), header = TRUE, stringsAsFactors = FALSE)
+# colors
+```
+
+```{r section5}
+colorsRGB <- colors %>%
+  mutate(rgb = plotly::toRGB(x)) %>%
+  separate(rgb, into = c("prefix", "r", "g", "b", "alpha"), sep = "\\(|,|\\)") %>%
+  mutate(rgb = paste(r, g, b, sep = ",")) %>%
+  mutate(r = as.numeric(r),
+         g = as.numeric(g),
+         b = as.numeric(b))
+```
+
+```{r section6}
+rgbOnly <- colorsRGB %>%
+  select(c(r, g, b))
+```
+
+```{r section7}
+colorsHSV <- t(rgb2hsv(t(rgbOnly))) %>% as.data.frame()
+
+allColors <- colorsRGB %>%
+  cbind(colorsHSV)
+# colorsHSV
+```
+
+```{r section8}
+ggplot(allColors, aes(x = h,fill=x)) + geom_dotplot(binwidth = 0.05, dotsize=1,show.legend=FALSE) +
+  scale_y_continuous(NULL, breaks = NULL)
+```
+
+```{r section9}
+
+imagePath <- here::here("the1975_51834277_321587081800203_2309023070712795189_n.jpg")
+imgMatrix <- readJPEG(imagePath)
+
+df = data.frame(
+   red = matrix(imgMatrix[,,1], ncol=1),
+   green = matrix(imgMatrix[,,2], ncol=1),
+   blue = matrix(imgMatrix[,,3], ncol=1)
+)
+K = kmeans(df,4)
+df$label = K$cluster
+
+colors = data.frame(
+  label = 1:nrow(K$centers),
+  R = K$centers[,"red"],
+  G = K$centers[,"green"],
+  B = K$centers[,"blue"]
+)
+df$order = 1:nrow(df)
+df = merge(df, colors)
+df = df[order(df$order),]
+df$order = NULL
+R = matrix(df$R, nrow=dim(imgMatrix)[1])
+G = matrix(df$G, nrow=dim(imgMatrix)[1])
+B = matrix(df$B, nrow=dim(imgMatrix)[1])
+imgMatrix.segmented = array(dim=dim(imgMatrix))
+imgMatrix.segmented[,,1] = R
+imgMatrix.segmented[,,2] = G
+imgMatrix.segmented[,,3] = B
+grid.raster(imgMatrix.segmented)
+PCA = prcomp(df[,c("red","green","blue")], center=TRUE, scale=TRUE)
+df$u = PCA$x[,1]
+df$v = PCA$x[,2]
+ggplot(df, aes(x=u, y=v, col=rgb(red,green,blue))) +
+  geom_point(size=2) + scale_color_identity()
+ggplot(df, aes(x=u, y=v, col=rgb(R,G,B))) +
+  geom_point(size=2) + scale_color_identity()
+```
+
+
