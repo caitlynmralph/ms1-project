@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-file=no">
+
+        <title>Reading and Leeds Festival</title>
+        <meta name="description" content="My Major Studio 1 project analyzing Reading and Leeds Festival from the past 20 years.">
+
+        <link rel="stylesheet" href="bundle.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=News+Cycle');
+        </style>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+    </head>
+
+    <body>
+
+            <header>
+
+                <div class=container-1>
+                    <div id=#video>
+                        <video src='img/catfish-2013.mp4' poster='img/catfish-2013.jpg' style='width:100%;height:100vh;' muted preload autoplay loop playsinline></video>
+                    </div>
+                    <div class=content-1a><h1>In 2013, Catfish and the Bottlemen were on the BBC Music Introducing Stage at Reading and Leeds Festival.</h1></div>
+                    <div class=content-1b><p>They shredded. 🤘</p></div>
+                </div>
+
+                <div class=container-2>
+                    <div id=#video>
+                        <video src='img/catfish-2014.mp4' poster='img/catfish-2014.jpg' style='width:100%;height:100vh;' muted preload autoplay loop playsinline></video>
+                    </div>
+                    <div class=content-2a><h2>At 2014's Festival, they performed on the slightly larger Festival Republic Stage, a place for emerging but 🔥 acts.</h2></div>
+                    <div class=content-2b><p>The lead singer reflected on the performance, saying: "I can't even speak. It's just magic."</p></div>
+                </div>
+
+                <div class=container-3>
+                    <div id=#video>
+                        <video src='img/catfish-2015.mp4' poster='img/catfish-2015.jpg' style='width:100%;height:100vh;' muted preload autoplay loop playsinline></video>
+                    </div>
+                    <div class=content-3a><h2>By 2015, Catfish and the Bottlemen were one of the top acts on the NME/BBC Radio 1 Stage, a position held two years prior by 2019 Coachella headliners Tame Impala.</h2></div>
+                </div>
+
+                <div class=container-4>
+                    <div class=content-4><h2>It was a game-changer.</h2></div>
+                </div>
+
+                <div class=container-5>
+                    <div id=#image>
+                            <img src='img/header.jpg' style='width:100%;height:100vh;opacity:0.5'></img>
+                    </div>
+                    <div class=heading><h1>From Combacks to Rising Stars</h1></div>
+                    <div class=deck><h3>20 years of Reading and Leeds Festival as lens to analyze musician career arcs</h3></div>
+                </div>
+
+                <div class=container-6>
+                    <div class=intro><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam at lectus urna duis convallis. Justo nec ultrices dui sapien eget mi proin. Habitant morbi tristique senectus et netus. Ac tortor vitae purus faucibus ornare. Nec ullamcorper sit amet risus nullam eget. Eget dolor morbi non arcu. Et netus et malesuada fames. Quis hendrerit dolor magna eget est lorem ipsum. Maecenas pharetra convallis posuere morbi. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Laoreet non curabitur gravida arcu ac tortor. Ac turpis egestas integer eget aliquet nibh.
+                            Turpis massa tincidunt dui ut ornare lectus sit amet est. Urna duis convallis convallis tellus id interdum velit laoreet id.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam at lectus urna duis convallis. Justo nec ultrices dui sapien eget mi proin. Habitant morbi tristique senectus et netus. Ac tortor vitae purus faucibus ornare. Nec ullamcorper sit amet risus nullam eget. Eget dolor morbi non arcu. Et netus et malesuada fames. Quis hendrerit dolor magna eget est lorem ipsum. Maecenas pharetra convallis posuere morbi. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Laoreet non curabitur gravida arcu ac tortor. Ac turpis egestas integer eget aliquet nibh. 
+                            Turpis massa tincidunt dui ut ornare lectus sit amet est. Urna duis convallis convallis tellus id interdum velit laoreet id.</p></div>
+                </div>
+
+            <header>
+
+        <div class=container-7>
+            <div class=text-right><p>Let’s first look at how many times each act that has ever been on the fesival in the past twenty years.</p></div>
+            <div><script src="bar-1.js"></script></div>
+        </div>
+
+        <div class=container-8>
+            <div class=text-right><p>But let’s actually remove acts that have only played once. As you can see, there is a huge corpus of one-hit wonders.</p></div>
+            <div class=placeholder-left></div>
+        </div>
+
+        <div class=container-8>
+            <div class=text-right><p>However, some acts had more time to be on the festival since their first appearance was earlier in time. To account for that, let’s break it up by year of first appearance. Each chart splits first appearance by every five years.</p></div>
+            <div class=placeholder-left></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>Within each of those bars, different acts have different arcs throughout their time at the festival, save those who were just a blip on the lineup for one or two years.</br>
+                    </br>
+                    In order to conceptualize that, we need understand the set-up of Reading and Leeds posters.</br>
+                    </br>
+                    Over the past twenty years, the layout of the festival itself and the accompanying posters has stayed overwhelmingly similar.</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>In order to understand what the poster is saying, think of it like a date table: the columns represent each day of the festival, and the rows below are the acts, in ranked order.</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>Basically, if a musician is higher up on the poster—and therefore the lineup—they have more prominence. The lineup is also broken up by performance stages. The organization of the stages is similar to the overall poster’s organization: higher up stages hold greater prominence and physical size while lower stages are reserved for smaller and maybe even unsigned acts.</br>
+                    </br>
+                    Again, the hierarchy within the stage is similar—however, it sometimes can get a bit blurry. For example, acts are often placed on the same level, and therefore the same rank.</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>Let’s choose to look at the posters on the stage level, with the underlying assumption that leveling up between stages is a clear inflection point in a musician’s arc. The stages in the past 20 years have stayed as similar as the style of the poster—besides name and sponsorship changes, each have held a similar place in the lineup.</br>
+                    </br>
+                    Because of that, we can consistently judge an artist’s placement on the lineup based on the stage they’re playing. In order to analyze at a larger scale, we can templatize a poster in the following manner.</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-8>
+                <div class=text-right><p>The median number of times played at Reading and Leeds is X years. We’re going to filter the X artists in the dataset down to the ones that fall above the fold. This will leave us with a corpus of artists that have enough history at the festival to develop an arc over time based on their lineup ranking.</p></div>
+                <div class=placeholder-left></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>Now that we have established a clear way to analyze the set of posters, let’s look within one of the bars on the histogram. We’re going to focus first on the acts who have played the festival X times, the most in the entire dataset.</br>
+                    </br>
+                    X has played Reading and Leeds Festival X times. Their placement on the lineup went from X to X to X. We can visually explore that on the posters themselves.</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>Here’s the arc of every artist who played the festival X times.</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>And if we disperse this throughout time...</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-9>
+            <div class=center-text><p>Reviewing this spread, patterns emerge. We can classify them as the following.,</p></div>
+            <div class=placeholder-bottom></div>
+        </div>
+
+        <div class=container-8>
+                <div class=text-right><p>PATTERN #1 + CASE STUDY</p></div>
+                <div class=placeholder-left></div>
+        </div>
+
+        <div class=container-8>
+                <div class=text-right><p>PATTERN #2 + CASE STUDY</p></div>
+                <div class=placeholder-left></div>
+        </div>
+
+        <div class=container-8 style="border-bottom: 5px solid #931F1D;">
+                <div class=text-right><p>PATTERN #3 + CASE STUDY</p></div>
+                <div class=placeholder-left></div>
+        </div>
+
+        <div class=container-6>
+            <div class=intro><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam at lectus urna duis convallis. Justo nec ultrices dui sapien eget mi proin. Habitant morbi tristique senectus et netus. Ac tortor vitae purus faucibus ornare. Nec ullamcorper sit amet risus nullam eget. Eget dolor morbi non arcu. Et netus et malesuada fames. Quis hendrerit dolor magna eget est lorem ipsum. Maecenas pharetra convallis posuere morbi. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Laoreet non curabitur gravida arcu ac tortor. Ac turpis egestas integer eget aliquet nibh.
+                    Turpis massa tincidunt dui ut ornare lectus sit amet est. Urna duis convallis convallis tellus id interdum velit laoreet id.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam at lectus urna duis convallis. Justo nec ultrices dui sapien eget mi proin. Habitant morbi tristique senectus et netus. Ac tortor vitae purus faucibus ornare. Nec ullamcorper sit amet risus nullam eget. Eget dolor morbi non arcu. Et netus et malesuada fames. Quis hendrerit dolor magna eget est lorem ipsum. Maecenas pharetra convallis posuere morbi. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Laoreet non curabitur gravida arcu ac tortor. Ac turpis egestas integer eget aliquet nibh. 
+                    Turpis massa tincidunt dui ut ornare lectus sit amet est. Urna duis convallis convallis tellus id interdum velit laoreet id.</p></div>
+        </div>
+
+        <div class=data-container>
+            <div class=data-box><h3>METHODOLOGY + WHERE YOU CAN FIND THE DATA</h3></div>
+        </div>
+    </body>
+
+</html>
