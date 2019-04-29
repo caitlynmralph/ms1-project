@@ -4,6 +4,7 @@ html {
 
 body {
     display: block;
+    /* background: black; */
     background: black;
 }
 
@@ -58,6 +59,12 @@ body {
     width: auto
 }
 
+.content-1c {
+    position: absolute;
+    top:30vh; left:70vw;
+    width:15vw;
+}
+
 .container-2 {
     position: relative;
 }
@@ -92,6 +99,12 @@ body {
     width: auto
 }
 
+.content-2c {
+    position: absolute;
+    top:30vh; left:70vw;
+    width:15vw;
+}
+
 .container-3 {
     position: relative;
 }
@@ -109,6 +122,12 @@ body {
     color: #514843;
     padding: 0px 10px 0px 20px;
     width: 50vw
+}
+
+.content-3b {
+    position: absolute;
+    top:30vh; left:70vw;
+    width:15vw;
 }
 
 .container-4 {
@@ -266,6 +285,26 @@ body {
     height: 50vh;
 }
 
+.container-arc {
+    position: relative;
+    background: #F9F9F9;
+    border-left: 5px solid #931F1D;
+    border-right: 5px solid #931F1D;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 3000px;
+}
+
+.container-arc-year {
+    position: relative;
+    background: #F9F9F9;
+    border-left: 5px solid #931F1D;
+    border-right: 5px solid #931F1D;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 3000px;
+}
+
 .container-9 {
     position: relative;
     background: #F9F9F9;
@@ -274,6 +313,23 @@ body {
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
+}
+
+.container-10 {
+    position: relative;
+    background: #F9F9F9;
+    border-left: 5px solid #931F1D;
+    border-right: 5px solid #931F1D;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-11 {
+    position: relative;
+    width:100vw;
+    height: 80vh;
+    background: #FFDD8E;
 }
 
 .center-text {
@@ -300,6 +356,41 @@ body {
     height: 50vh;
 }
 
+.collage {
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+    width: 30vw;
+}
+
+.diagram {
+    position: absolute;
+    top: 15vh;
+    left: 35vw;
+    width: 30vw;
+}
+
+.example {
+    position: absolute;
+    top: 40vh;
+    left: 35vw;
+    width: 30vw;
+}
+
+.template {
+    position: absolute;
+    top: 10vh;
+    left: 35vw;
+    width: 30vw;
+}
+
+.biffy {
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    width: 80vw;
+}
+
 .data-container {
     position: relative;
     width:100vw;
@@ -323,22 +414,3 @@ body {
     color: #514843;
     padding: 0px 20px 0px 20px;
 }
-
-.bar {
-    fill: steelblue;
-  }
-  
-  .axis text {
-    font: 10px sans-serif;
-  }
-  
-  .axis path,
-  .axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-  }
-  
-  .x.axis path {
-    display: none;
-  }
