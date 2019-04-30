@@ -9,7 +9,7 @@ var tooltips = ["zero","one","two",
 "Biffy Clyro, Enter Shikari"]
 
 var chart2 = d3.select("#chart-2"),
-    margin2 = {top: 0, right: 20, bottom: 0, left: 150},
+    margin2 = {top: 75, right: 50, bottom: 100, left: 180},
     width2 = +chart2.attr("width") - margin2.left - margin2.right,
     height2 = +chart2.attr("height") - margin2.top - margin2.bottom;
 
@@ -41,7 +41,7 @@ d3.csv("data/3-artist-counts.csv")
         g2.append("g")
             .attr("class", "axis axis--x")
             .attr("class","axis-text")
-            .attr("transform", "translate(0," + height + ")")
+            .attr("transform", "translate(0," + height2 + ")")
             .call(d3.axisBottom(x2))
             .append("text")
                 .attr("x",width2/2)

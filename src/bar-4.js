@@ -9,7 +9,7 @@ var tooltipsFour = ["zero","one","two",
 "Biffy Clyro, Enter Shikari"]
 
 var chart4 = d3.select("#chart-4"),
-    margin4 = {top: 75, right: 20, bottom: 100, left: 150},
+    margin4 = {top: 75, right: 50, bottom: 100, left: 180},
     width4 = +chart4.attr("width") - margin4.left - margin4.right,
     height4 = +chart4.attr("height") - margin4.top - margin4.bottom;
 

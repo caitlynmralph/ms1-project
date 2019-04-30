@@ -1,7 +1,7 @@
 var padding = 10;
 
 var svg2005 = d3.select("#earliest"),
-    margin2005 = {top: 150, right: 10, bottom: 10, left: 50},
+    margin2005 = {top: 150, right: 10, bottom: 10, left: 250},
     width2005 = +svg.attr("width") - margin2005.left - margin2005.right,
     height2005 = +svg.attr("height") - margin2005.top - margin2005.bottom;
 

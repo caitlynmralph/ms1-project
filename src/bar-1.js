@@ -1,7 +1,7 @@
 var padding = 10;
 
 var svg = d3.select("#chart-1"),
-    margin = {top: 75, right: 20, bottom: 100, left: 150},
+    margin = {top: 75, right: 50, bottom: 100, left: 180},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 

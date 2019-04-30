@@ -231,8 +231,9 @@ body {
 
 .text-right {
     position: absolute;
-    top: 30vh;
-    left: 60vw;
+    top: 25vh;
+    left: 50vw;
+    right: 5vw;
     font-family: News Cycle;
     font-style: normal;
     font-weight: normal;
@@ -262,10 +263,11 @@ body {
     height: 100vh;
 }
 
-.text-right {
+.text-right-2 {
     position: absolute;
-    top: 30vh;
+    top: 25vh;
     left: 60vw;
+    right: 0vw;
     font-family: News Cycle;
     font-style: normal;
     font-weight: normal;

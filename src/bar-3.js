@@ -1,7 +1,7 @@
 var padding = 10;
 
 var svg3 = d3.select("svg"),
-    margin3 = {top: 50, right: 10, bottom: 0, left: 100},
+    margin3 = {top: 50, right: 10, bottom: 50, left: 100},
     width3 = 400 - margin3.left - margin3.right,
     height3 = 300 - margin3.top - margin3.bottom;
 
@@ -53,8 +53,8 @@ d3.csv("data/3-artist-counts-by-year.csv")
 
         svgs.append("g")
             .append("text")
-                .attr("x","50")
-                .attr("y","50")
+                .attr("x","100")
+                .attr("y","10")
                 .attr("class","axis-text")
                 .style("fill","black")
                 .text(function(d) {return d.key})
