@@ -1,5 +1,3 @@
-var padding = 10;
-
 var svg = d3.select("#chart-1"),
     margin = {top: 75, right: 50, bottom: 100, left: 180},
     width = +svg.attr("width") - margin.left - margin.right,
@@ -24,25 +22,25 @@ d3.csv("data/all-artist-counts.csv")
         y.domain([0, d3.max(data, function(d) { return d.artists; })]);
 
         g.append("g")
-            .attr("class", "axis axis--x")
-            .attr("class","axis-text")
+          .attr("class","axis-text")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x))
+            .call(g => g.select(".domain").remove())
             .append("text")
-                .attr("x",width/2)
-                .attr("y","45")
+                .attr("x",175)
+                .attr("y",45)
                 .attr("class","axis-text")
                 .style("fill","black")
                 .text("Times Played")
 
         g.append("g")
-            .attr("class", "axis axis--y")
             .attr("class","axis-text")
             .call(d3.axisLeft(y).ticks(10))
+            .call(g => g.select(".domain").remove())
           .append("text")
             .attr("transform", "rotate(-90)")
-            .attr("y",-1*(height/10)-padding)
-            .attr("x",-1*(width/4)-padding*2)
+            .attr("y",-50)
+            .attr("x",-150)
             // .attr("text-anchor", "end")
             .attr("class","axis-text")
             .style("fill","black")

@@ -1,5 +1,3 @@
-var padding = 10;
-
 var svg3 = d3.select("svg"),
     margin3 = {top: 50, right: 10, bottom: 50, left: 100},
     width3 = 400 - margin3.left - margin3.right,
@@ -38,18 +36,18 @@ d3.csv("data/3-artist-counts-by-year.csv")
             .attr("transform","translate(" + margin3.left + "," + margin3.top + ")");
 
         svgs.append("g")
-            .attr("class", "axis axis--x")
             .attr("class","axis-text")
             .attr("transform", "translate(0," + height3 + ")")
             .call(d3.axisBottom(x3))
+            .call(g => g.select(".domain").remove())
 
-        svgs.append("g")
-            .append("text")
-                .attr("x",(width3-margin3.left-margin3.left)/2)
-                .attr("y",height3+40)
-                .attr("class","axis-text")
-                .style("fill","black")
-                .text("Times Played")
+        // svgs.append("g")
+        //     .append("text")
+        //         .attr("x",100)
+        //         .attr("y",240)
+        //         .attr("class","axis-text")
+        //         .style("fill","black")
+        //         .text("Times Played")
 
         svgs.append("g")
             .append("text")
@@ -60,17 +58,16 @@ d3.csv("data/3-artist-counts-by-year.csv")
                 .text(function(d) {return d.key})
 
         svgs.append("g")
-            .attr("class", "axis axis--y")
             .attr("class","axis-text")
             .call(d3.axisLeft(y3).ticks(3))
-          .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y",-1*(height3/10)-padding)
-            .attr("x",-1*(width3/4)-padding*2)
-            // .attr("text-anchor", "end")
-            .attr("class","axis-text")
-            .style("fill","black")
-            .text("Number of Artists");
+            .call(g => g.select(".domain").remove())
+          // .append("text")
+          //   .attr("transform", "rotate(-90)")
+          //   .attr("y",-40)
+          //   .attr("x",-70)
+          //   .attr("class","axis-text")
+          //   .style("fill","black")
+          //   .text("Number of Artists");
 
         svgs.selectAll(".bar")
           .data(function(d) {return d.values;})

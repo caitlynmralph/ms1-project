@@ -1,7 +1,7 @@
 var padding = 10;
 
 var svgEight = d3.select("#eight"),
-    marginEight = {top: 150, right: 20, bottom: 50, left: 175},
+    marginEight = {top: 250, right: 20, bottom: 0, left: 195},
     widthEight = +svg.attr("width") - marginEight.left - marginEight.right,
     heightEight = +svg.attr("height") - marginEight.top - marginEight.bottom;
 

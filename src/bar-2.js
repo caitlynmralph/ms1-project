@@ -1,5 +1,3 @@
-var padding = 10;
-
 var tooltips = ["zero","one","two",
 "A, A Day To Remember, A Wilhelm Scream, Adam Green, AJ Tracey, Alma, alt-J, Alunageorge, Amen, And So I Watch You From Afar, And You Will Know Us By The Trail of Dead, Andy C, Arcane Roots, Architects, At The Drive-In, Azealia Banks, Band of Skulls, Basement, Be Your Own Pet, Bedouin Soundclash, Black Foxxes, Black Honey, Blaenavon, Bowling For Soup, Boysetsfire, Buck 65, Bugzy Malone, Catfish and the Bottlemen, Chapel Club, Childhood, Crossfaith, David Rodigan, Deap Vally, Digitalism, Disclosure, DJ Target, DMA's, Does It Offend You, Yeah?, Doves, Drenge, Editors, Eminem, Fickle Friends, Fight Like Apes, Fightstar, Florence and the Machine, Foster The People, Frankie and the Heartstrings, Franz Ferdinand, Fred V & Grafix, Friendly Fires, General Fiasco, Gnarwolves, Goldfinger, Goldie Lookin' Chain, Green Day, Guided By Voices, Hacktivist, Hannah Wants, Hawk Eyes, Hell is for Heroes, Ikara Colt, Imagine Dragons, Jack Peñate, Jaguar Skills, Jake Bugg, James Organ, Jamie T, Kaiser Chiefs, Kasabian, Kate Nash, Lady Leshurr, Limp Bizkit, Lonely The Brave, Los Campesinos!, Lucy Rose, Mad Caddies, Mallory Knox, Manchester Orchestra, Mariachi El Bronx, Metallica, Milk Teeth, Mini Mansions, Mistajam, Muncie Girls, Municipal Waste, Mura Masa, My Chemical Romance, Neck Deep, NOFX, Nothing But Thieves, Otherkin, P Money, Pale Waves, Papa Roach, Patrick Wolf, Peaches, Pennywise, Primal Scream, Pulp, PVRIS, Random Hand, Rat Boy, Razorlight, Red Hot Chili Peppers, Rival Schools, Royal Blood, Saint Raymond, Savages, Saves The Day, Seasick Steve, Skindred, Slipknot, Snuff, Sonic Boom Six, Sparta, Spring King, Star.One, Sum 41, SWMRS, System Of A Down, The Computers, The Cooper Temple Clause, The Courteeners, The Districts, The Donnas, The Duke Spirit, The Flatliners, The Get Up Kids, The Hunna, The Japanese House, The Kooks, The Magic Gang, The Minutes, The Music, The Rakes, The Sherlocks, The Shins, The Strokes, The Used, The White Stripes, Tribes, Turbonegro, twenty one pilots, Vampire Weekend, Vant, Warpaint, While She Sleeps, Wilkinson, Wolf Alice, Young Guns",
 "2manydjs, Against Me!, Alkaline Trio, All Time Low, Arctic Monkeys, Blossoms, Bring Me The Horizon, Bullet for my Valentine, Cage the Elephant, Cancer Bats, Charli XCX, Circa Waves, Coheed and Cambria, Deftones, Dillon Francis, Dizzee Rascal, Dropkick Murphys, Dry The River, Fekky, Fidlar, Frank Carter and the Rattlesnakes, Get Cape. Wear Cape. Fly, Gogol Bordello, Graham Coxon, Interpol, Jacob Plant, Kids in Glass Houses, Kings of Leon, Klaxons, Krept & Konan, Ladytron, LCD Soundsystem, Lower Than Atlantis, Mastodon, Our Fold, Palma Violets, Peace, Pendulum, Placebo, Reel Big Fish, Rise Against, Roots Manuva, Sub Focus, Taking Back Sunday, Ten Tonnes, The 1975, The Hives, The King Blues, The Offspring, The Skints, The Sunshine Underground, The Vaccines, Thursday, White Lies, Wiley, Yeah Yeah Yeahs",
@@ -9,7 +7,7 @@ var tooltips = ["zero","one","two",
 "Biffy Clyro, Enter Shikari"]
 
 var chart2 = d3.select("#chart-2"),
-    margin2 = {top: 75, right: 50, bottom: 100, left: 180},
+    margin2 = {top: 300, right: 50, bottom: 100, left: 180},
     width2 = +chart2.attr("width") - margin2.left - margin2.right,
     height2 = +chart2.attr("height") - margin2.top - margin2.bottom;
 
@@ -20,7 +18,7 @@ var g2 = chart2.append("g")
     .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
 var svgContainer = d3.select('body');
-var svg2 = svgContainer.append('svg')
+// var svg2 = svgContainer.append('svg')
 var div = svgContainer
       .append('div')
       .attr("class", "tooltip")				
@@ -39,25 +37,25 @@ d3.csv("data/3-artist-counts.csv")
         y2.domain([0, d3.max(data, function(d) { return d.artists; })]);
 
         g2.append("g")
-            .attr("class", "axis axis--x")
             .attr("class","axis-text")
             .attr("transform", "translate(0," + height2 + ")")
             .call(d3.axisBottom(x2))
+            .call(g => g.select(".domain").remove())
             .append("text")
-                .attr("x",width2/2)
+                .attr("x",150)
                 .attr("y","45")
                 .attr("class","axis-text")
                 .style("fill","black")
                 .text("Times Played")
 
         g2.append("g")
-            .attr("class", "axis axis--y")
             .attr("class","axis-text")
-            .call(d3.axisLeft(y2).ticks(10))
+            .call(d3.axisLeft(y2).ticks(4))
+            .call(g => g.select(".domain").remove())
           .append("text")
             .attr("transform", "rotate(-90)")
-            .attr("y",-1*(height2/10)-padding)
-            .attr("x",-1*(width2/4)-padding*2)
+            .attr("y",-50)
+            .attr("x",-20)
             // .attr("text-anchor", "end")
             .attr("class","axis-text")
             .style("fill","black")
