@@ -1,5 +1,5 @@
 var svg = d3.select("#chart-1"),
-    margin = {top: 75, right: 50, bottom: 100, left: 180},
+    margin = {top: 150, right: 50, bottom: 25, left: 180},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 

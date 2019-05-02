@@ -1,7 +1,7 @@
 var padding = 10;
 
 var svgFour = d3.select("#four"),
-    marginFour = {top: 250, right: 10, bottom: 0, left: 1100},
+    marginFour = {top: 250, right: 10, bottom: 0, left: 1095},
     widthFour = +svg.attr("width") - marginFour.left - marginFour.right,
     heightFour = +svg.attr("height") - marginFour.top - marginFour.bottom;
 

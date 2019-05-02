@@ -204,7 +204,7 @@ body {
 .container-6 {
     position: relative;
     width:100vw;
-    height: 150vh;
+    height: 90vh;
     background: #931F1D;
 }
 
@@ -228,6 +228,10 @@ body {
     padding: 0px 20px 0px 20px;
 }
 
+/* end of intro, beginning of body */
+
+/* containers */
+
 .container-7 {
     position: relative;
     background: #F9F9F9;
@@ -236,24 +240,9 @@ body {
     border-top: 5px solid #931F1D;
     box-sizing: border-box; */
     width: 100vw;
-    height: 65vh;
+    height: 67vh;
 }
 
-.text-right {
-    position: absolute;
-    top: 30vh;
-    left: 50vw;
-    right: 5vw;
-    font-family: 'News Cycle';
-    /* letter-spacing: 1px; */
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 33px;
-    text-align: left;
-    color: #514843;
-    padding: 10px 50px 10px 10px;
-}
 
 .container-8 {
     position: relative;
@@ -263,36 +252,6 @@ body {
     box-sizing: border-box; */
     width: 100vw;
     height: 90vh;
-}
-
-.text-right-2 {
-    position: absolute;
-    top: 18vh;
-    left: 60vw;
-    right: 0vw;
-    font-family: News Cycle;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 33px;
-    text-align: left;
-    color: #514843;
-    padding: 10px 50px 10px 10px;
-}
-
-.text-right-3 {
-    position: absolute;
-    top: 7vh;
-    left: 50vw;
-    right: 3vw;
-    font-family: News Cycle;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 33px;
-    text-align: left;
-    color: #514843;
-    padding: 10px 50px 10px 10px;
 }
 
 .container-9 {
@@ -315,26 +274,6 @@ body {
     height: 105vh;
 }
 
-.container-arc {
-    position: relative;
-    background: #F9F9F9;
-    /* border-left: 5px solid #931F1D;
-    border-right: 5px solid #931F1D;
-    box-sizing: border-box; */
-    width: 100vw;
-    /* height: 3000px; */
-}
-
-.container-arc-year {
-    position: relative;
-    background: #F9F9F9;
-    /* border-left: 5px solid #931F1D;
-    border-right: 5px solid #931F1D;
-    box-sizing: border-box; */
-    width: 100vw;
-    /* height: 3000px; */
-}
-
 .container-11 {
     position: relative;
     background: #F9F9F9;
@@ -352,7 +291,17 @@ body {
     border-right: 5px solid #931F1D;
     box-sizing: border-box; */
     width: 100vw;
-    height: 65vh;
+    height: 55vh;
+}
+
+.pre-button {
+    position: relative;
+    background: #F9F9F9;
+    /* border-left: 5px solid #931F1D;
+    border-right: 5px solid #931F1D;
+    box-sizing: border-box; */
+    width: 100vw;
+    height: 30vh;
 }
 
 .container-13 {
@@ -400,6 +349,58 @@ body {
     width:100vw;
     height: 115vh;
     background: #931F1D;
+}
+
+/* .container-arc {
+    position: relative;
+    background: #F9F9F9;
+    width: 100vw;
+} */
+
+.text-right {
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    right: 5vw;
+    font-family: 'News Cycle';
+    /* letter-spacing: 1px; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    text-align: left;
+    color: #514843;
+    padding: 10px 50px 10px 10px;
+}
+
+.text-right-2 {
+    position: absolute;
+    top: 18vh;
+    left: 60vw;
+    right: 0vw;
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    text-align: left;
+    color: #514843;
+    padding: 10px 50px 10px 10px;
+}
+
+.text-right-3 {
+    position: absolute;
+    top: 7vh;
+    left: 50vw;
+    right: 3vw;
+    font-family: News Cycle;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    text-align: left;
+    color: #514843;
+    padding: 10px 50px 10px 10px;
 }
 
 .caption-text {
@@ -478,16 +479,6 @@ body {
     color: #F9F9F9;
 }
 
-.placeholder-bottom {
-    position: absolute;
-    background: #C4C4C4;
-    top: 40vh;
-    left: 30vw;
-    right: 30vw;
-    width: 40vw;
-    height: 50vh;
-}
-
 .collage {
     position: absolute;
     top: 33vh;
@@ -504,7 +495,7 @@ body {
 
 .example {
     position: absolute;
-    top: 57vh;
+    top: 50vh;
     left: 35vw;
     width: 30vw;
 }
@@ -566,7 +557,7 @@ body {
 .data-container {
     position: relative;
     width:100vw;
-    height: 700vh;
+    height: 600vh;
     background: #931F1D;
 }
 

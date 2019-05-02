@@ -12,10 +12,7 @@
         <link rel="stylesheet" href="bundle.css">
         <style>
             @import url('https://fonts.googleapis.com/css?family=News+Cycle');
-            @import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911');
-            @import url('https://fonts.googleapis.com/css?family=Gilda+Display');
             @import url('https://fonts.googleapis.com/css?family=Gilda+Display|Source+Sans+Pro');
-            @import url('https://fonts.googleapis.com/css?family=Gilda+Display|Noto+Sans+KR|Oxygen|Source+Sans+Pro');
             .bar {
                 fill: #ffdd8e;
             }
@@ -56,7 +53,7 @@
             }
 
             .label-text {
-                fill: black;
+                fill: #514843;
                 font-family: 'Gilda Display', serif;
                 font-style: normal;
                 font-weight: bold;
@@ -69,9 +66,43 @@
                 height: 0px;
             }
 
+            .container-arc {
+                display: none;
+                position: relative;
+                background: #F9F9F9;
+                width: 100vw;
+            }
+
+            .button.active {
+                color: #F9F9F9;
+            }
+
+            .button {
+                color: #F9F9F9;
+                background: #931F1D;
+                opacity: 0.5;
+                font-family: News Cycle;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 20px;
+                text-align: left;
+                padding: 10px 10px 10px 10px;
+            }
+
+            .flr-wrap {
+                background: #F9F9F9;
+                padding: 0px 0px 0px 0px;
+            }
+
+            .flr-inner {
+                background: #F9F9F9;
+            }
+
 
         </style>
         <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="jquery-3.4.1.min.js"></script>
     </head>
 
     <body>
@@ -83,7 +114,7 @@
                         <video src='img/catfish-2013.mp4' poster='img/catfish-2013.jpg' style='width:100%;opacity:0.5;' onclick="this.play()" muted preload loop playsinline></video>
                     </div>
                     <div class=content-1a><h1>In 2013, Catfish and the Bottlemen were on the BBC Music Introducing Stage at Reading and Leeds Festival.</h1></div>
-                    <div class=content-1b><p>Click to play—trust me, they shredded. 🤘</p></div>
+                    <div class=content-1b><p>Click to watch—trust me, they shredded. 🤘</p></div>
                     <div class=content-1c><embed src="img/2013.svg"></div>
                 </div>
 
@@ -121,55 +152,53 @@
                         </br>
                         Reading Festival is now colloquially known as Reading and Leeds, a name-change prompted by the three-day event expanding to two locations in 1999 (Leeds is in North England, Reading is in South England). Since then, Reading and Leeds has cemented itself as a stronghold in the broad but recognizable indie, alternative, and rock genre.</br>
                         </br>
-                        While there is no way to imply a causal relationship between bands’ success and Reading and Leeds Festival placement, it is interesting to map success alongside where they land on the ballot. If we are to assume “iconic” popular music festivals are a reflection of at least musical culture during a certain period of time (considering the locations for Reading and Leeds Festival can host over 150,000 people over the course of three days), we can also assume festival lineup arrangement is a tangible measurement of artist popularity—one that the algorithm for Billboard doesn’t necessarily take into account.</br>
-                        </br>
-                        As Frith, Brennan, Cloonan, and Webster stated in 2013, “...most present accounts of ‘the music industry’ over-privilege the recording sector at the expense of the sector in which most musicians in all genres have been located historically: the live arena.”</br>
-                        </br>
-                        With that said, the goal is to use Reading and Leeds Festival poster placement as a representation of musicians' career arcs. We'll walk through how many times artists have played the Festival over the past twenty years, eventually selecting a smaller corpus of arcs to analyze closer. Lastly, we'll dive into three different case studies of patterns of career arcs as seen throughout the posters.</p></div>
+                        As Frith, Brennan, Cloonan, and Webster stated in 2013, “...most present accounts of ‘the music industry’ over-privilege the recording sector at the expense of the sector in which most musicians in all genres have been located historically: the live arena.” With that said, the goal is to use Reading and Leeds Festival poster placement as an illustration of musicians' career arcs.</br>
+                        </p></div>
                 </div>
 
             </header>
         <div class=container-7>
-            <div class=text-right><p>Let’s first look at how many times every act that has been on a lineup in the past twenty years has played the Festival in total. This corpus includes over 2,400 unique artists.</p></div>
+            <div class=text-right><p>Let’s first look at how many times every act that has been on a lineup in the past twenty years has played the Festival in total. This corpus includes <span style="background:#ffdd8e">over 2,400 unique artists</span>.</p></div>
             <svg width=600 height=500 id="chart-1"></svg>
             <script src=bar-1.js></script>
         </div>
 
         <div class=container-8>
-            <div class=text-right><p>But that includes over 2,100 artists that have only played once or twice in the past twenty years—blips, if you will. So, let’s actually remove acts that have only played once or twice. As you can see, there is a huge corpus of one-(or two-)hit wonders.</p></div>
+            <div class=text-right><p>But that includes <span style="background:#ffdd8e">over 2,250 artists that have only played once, twice, or three times in the past twenty years</span>—blips on the lineup, if you will. Let’s actually remove them—we'll explain why below.</br>
+            </br>Hover over each bar to see the artists it contains.</p></div>
             <svg width=600 height=500 id="chart-2"></svg>
             <script src=bar-2.js></script>
         </div>
 
-        <div class=container-9>
+        <!-- <div class=container-9>
             <div class=text-right-2><p>However, some acts have had more time to be on the Festival because their first appearance was earlier in time. To account for that, let’s break it up by year of first appearance. Each chart splits the artist by their first appearance, grouping by every five years. The largest group of artists—who have played the festival more than twice—had their first appearance before 2005, as we would expect. Interesting though, there are 30 acts who have played the festival three or four times in the past five years. This points to repition in the lineup and a healthy corpus of those who are mainstays on the lineup in recent years.</p></div>
             <div style="width:80vw;height:100vh;" id="chart-3"></div>
             <script src=bar-3.js></script>
-        </div>
+        </div> -->
 
         <div class=container-10>
             <div class=center-text><p>Within each of those bars, different acts have different arcs throughout their time at the Festival.</br>
                 </br>    
-                In order to conceptualize that, we need understand the set-up of Reading and Leeds posters. Over the past twenty years, the layout of the Festival itself and the accompanying posters has stayed overwhelmingly similar.</p></div>
+                In order to conceptualize that, we need understand the set-up of Reading and Leeds posters. Over the past twenty years, <span style="background:#ffdd8e">the layout of the Festival itself and the accompanying posters has stayed overwhelmingly similar</span>.</p></div>
             <div class=collage><embed src="img/collage.svg"></embed></div>
         </div>
 
         <div class=container-10>
-            <div class=center-text><p>To understand what the poster is saying, think of it like a spreadsheet: The columns represent each day of the Festival, and the rows below are the acts, in ranked order.</p></div>
+            <div class=center-text><p>To understand what the poster is saying, think of it like a spreadsheet: The <span style="background:#ffdd8e">columns represent each day</span> of the Festival, and the <span style="background:#ffdd8e">rows below are the acts</span>, in ranked order.</p></div>
             <div class=diagram><embed src="img/poster-diagram.svg"></embed></div>
         </div>
 
         <div class=container-10>
-            <div class=center-text><p>The red boxes in the diagram above represent each day of the lineup that year. Basically, if a musician is higher up on the poster—and therefore the lineup—they have more prominence. The lineup is also broken up by performance stages, as seen in the black boxes on the diagram. The organization of the stages is similar to the overall poster’s organization: higher up stages hold greater prominence and physical size while lower stages are reserved for smaller and maybe even unsigned acts.</br>
+            <div class=center-text><p>The red boxes in the diagram above represent each day of the lineup that year. The lineup is also broken up by performance stages, as seen in the black boxes on the diagram. All the components of the poster follow the same rule: <span style="background:#ffdd8e">higher up holds greater prominence and physical size</span> while <span style="background:#ffdd8e">lower is reserved for smaller, emerging acts</span>.</br>
             </br>
-            Again, the hierarchy within the stage is similar—however, it sometimes can get a bit blurry. For example, acts are often placed on the same level, and therefore the same rank.</p></div>
+            The within-stage hierarchy is the same—however, it sometimes can get a bit blurry. For example, acts are often placed on the same level, and therefore the same rank.</p></div>
             <div class=example><embed src="img/example.svg"></embed></div>
         </div>
 
         <div class=container-10>
             <div class=center-text><p>Let’s choose to look at the posters on the stage level, with the underlying assumption that leveling up between stages is a clear inflection point in a musician’s arc. The stages in the past 20 years have stayed as similar as the style of the poster—besides name and sponsorship changes, each have held a similar place in the lineup.</br>
             </br>
-            At the bottom of the lineup is the BBC Music Introducing stage, which highlights emerging and unsigned acts. Above that is the Festival Republic stage (formerly the Carling Stage), a place for slightly larger, but still emerging acts. You can trace the beginning of the some of the biggest bands in the world to this stage—if they were starting to gain notoriety in the past twenty years and played Reading and Leeds, there's a good chance they started on this stage. Next are one or two genre-based stages: A dance stage and a hard rock/punk stage. Some years, they shared the ranking, and some years, they were split. Second to top is the NME/BBC Radio 1 Stage while the main stage is No. 1 in the ranking.</br>
+            At the bottom of the lineup is the <span style="background:#ffdd8e">BBC Music Introducing stage</span>, which highlights the smallest—but exciting—acts. Above that is the <span style="background:#ffdd8e">Festival Republic stage</span> (formerly the Carling Stage), a place for slightly larger, but still up-and-coming acts. You can trace the beginning of the some of the biggest bands in the world to this stage—if they were starting to gain notoriety in the past twenty years and played Reading and Leeds, there's a good chance they started on this stage. Next are one or two genre-based stages: <span style="background:#ffdd8e">A dance stage and a hard rock/punk stage</span>. Second to top is the <span style="background:#ffdd8e">NME/BBC Radio 1 Stage</span> while the <span style="background:#ffdd8e">main stage</span> is No. 1 in the ranking.</br>
             </br>
             Because of this consistency, we can judge an artist’s lineup placement based on the stage they’re playing. In order to analyze at a larger scale, we can templatize a poster in the following manner, with higher opacity correlating to a higher place in the ranking.</p></div>
         </div>
@@ -179,7 +208,7 @@
         </div>
 
         <div class=container-11>
-                <div class=text-right-3><p>Now that we understand how the posters and our ranking system works, let's return to our corpus of artists. To make sure we have enough inflection points to create a healthy path, we're going to move up our threshold and only look at acts who played the Festival more than four times in the past 20 years. This leaves us with a corpus of 128 artists to analyze.</p></div>
+                <div class=text-right-3><p>Now that we understand how the posters and our ranking system works, let's return to our corpus of artists. To make sure we have enough inflection points to create a healthy path, we're keep analyzing acts who played the Festival more than four times in the past 20 years. This leaves us with a corpus of <span style="background:#ffdd8e">128 artists</span> to analyze.</p></div>
                 <svg width=600 height=500 id="chart-4"></svg>
                 <script src=bar-4.js></script>
         </div>
@@ -189,7 +218,7 @@
                     </br>
                     Biffy Clyro has played Reading and Leeds Festival eight times in the past 20 years. Their stage placement on the lineup stumbled around the middle for a while (in 2002, they played on the Carling Stage, a.k.a. the Festival Republic stage) until reaching the top and staying there. Since 2008, if Biffy Clyro were on the lineup, they were headlining.</br> 
                     </br>
-                    We can visually explore that on the posters themselves, first with their individual placement on the lineup and then abstracted to look at their stage's placement on the lineup.</p></div>
+                    We can visually explore that on the posters themselves.</p></div>
         </div>
 
         <div class=container-13>
@@ -198,34 +227,50 @@
             <div class=biffy-line><embed src="img/biffy-line.svg"></embed></div>
         </div>
 
-        <div class=container-arc>
-            <div class=center-text><p>Using each artists' (those who have played the Festival more than four times in the pats two decades) stage rankings, we can programtically generate these paths. Here’s the arc of everyone in our artist corpus, ordered left to right by eight times played to four times played.</p></div>
-            <div class=arc-caption-left><p>8 Times Played</p></div>
-            <div class=arc-caption-right><p>4 Times Played</p></div>
-            <svg width=100vw height=300vh id="eight"></svg>
-            <script src=arc-8.js></script>
-            <svg id="seven"></svg>
-            <script src=arc-7.js></script>
-            <svg id="six"></svg>
-            <script src=arc-6.js></script>
-            <svg id="five"></svg>
-            <script src=arc-5.js></script>
-            <svg id="four"></svg>
-            <script src=arc-4.js></script>
+        <div class=pre-button>
+            <div class=center-text><p>Using each artists' stage rankings, we can programtically generate these paths.</br>
+            </br>
+            Toggle between two different views of the corpus of arcs: one ordered by <span style="background:#ffdd8e">number of times played</span> and the other ordered by <span style="background:#ffdd8e">year of first appearance</span>.</p></div>
         </div>
 
-        <div class=container-arc-year>
-            <div class=center-text><p>While there seem to be consistent patterns in types of arcs, there isn't an immediate pattern in the ordering by times played. Let's instead order by time of first appearance, again grouping by every five years. Those on the far left had their first performance before 2005, and those on the far right had their first performance after 2015.</p></div>
-            <div class=arc-caption-left><p>First Performance Before 2005</p></div>
-            <div class=arc-caption-right><p>First Performance After 2019</p></div>
-            <svg width=100vw height=380vh id="earliest"></svg>
-            <script src=arc-2005.js></script>
-            <svg id="early"></svg>
-            <script src=arc-2010.js></script>
-            <svg id="new"></svg>
-            <script src=arc-2015.js></script>
-            - <svg id="newest"></svg>
-            <script src=arc-2019.js></script>
+        <div class="flr-wrap">
+            <ul style="padding:0px 0px 10px 5vw;margin: 0px 0px 0px 0px; list-style: none; text-align: center">
+                <li><a class="button active" data-rel="#content-a" href="#">Times Played</a></li>
+                </br>
+                </br>
+                <li><a class="button" data-rel="#content-b" href="#">Year of First Appearance</a></li>
+            </ul>
+            
+            <div class="flr-inner">
+                <div class=container-arc id="content-a">
+                    <div class=center-text><p>Here’s the arc of everyone in our artist corpus, ordered left to right by eight times played to four times played.</p></div>
+                    <div class=arc-caption-left><p>8 Times Played</p></div>
+                    <div class=arc-caption-right><p>4 Times Played</p></div>
+                    <svg width=100vw height=300vh id="eight"></svg>
+                    <script src=arc-8.js></script>
+                    <svg id="seven"></svg>
+                    <script src=arc-7.js></script>
+                    <svg id="six"></svg>
+                    <script src=arc-6.js></script>
+                    <svg id="five"></svg>
+                    <script src=arc-5.js></script>
+                    <svg id="four"></svg>
+                    <script src=arc-4.js></script>
+                </div>
+                <div class=container-arc id="content-b">
+                    <div class=center-text><p>While there seem to be consistent patterns in types of arcs, there isn't an immediate pattern in the ordering by times played. Let's instead order by time of first appearance, again grouping by every five years. Those on the far left had their first performance before 2005, and those on the far right had their first performance after 2015.</p></div>
+                    <div class=arc-caption-left><p>First Performance Before 2005</p></div>
+                    <div class=arc-caption-right><p>First Performance After 2019</p></div>
+                    <svg width=100vw height=380vh id="earliest"></svg>
+                    <script src=arc-2005.js></script>
+                    <svg id="early"></svg>
+                    <script src=arc-2010.js></script>
+                    <svg id="new"></svg>
+                    <script src=arc-2015.js></script>
+                    <svg id="newest"></svg>
+                    <script src=arc-2019.js></script>
+                </div>
+            </div>
         </div>
 
         <div class=container-14>
@@ -240,7 +285,7 @@
 
         <div class=container-16>
                 <div class=center-text><p>PATTERN #2: Arctic Monkeys</br>
-                Arctic Monkeys are a prime example of the <strong>"exponential rise"</strong> arc. They started on the Festival Republic stage in 2005, and then immediately shot to headling status the following year, where they've stayed ever since. It's interesting to think about their arc in terms of the "success story" arc of the 1975, extrapolating if they'll stay at the top after their more progressive rise.</div>
+                Arctic Monkeys are a prime example of the <strong>"exponential rise"</strong> arc. They started on the Festival Republic stage in 2005, and then immediately shot to headling status the following year, where they've stayed ever since. It's interesting to think about their arc in terms of the "success story" arc of the 1975, extrapolating if the 1975 will stay at the top after their more progressive rise.</div>
                 <div class=case-study-arctic><embed src="img/arctic-monkeys.svg" width=1000vw></embed></div>
         </div>
 
@@ -252,8 +297,8 @@
 
         <div class=container-17>
             <div class=intro><p>By using 20 years of Reading and Leeds Festival posters as our database, we were able to construct musician career arcs using their yearly stage rankings. Reading Festival is the oldest music festival in the world, and in 1999, it expanded to two locations, now occuring in Reading and Leeds over the same Bank Holiday weekend every year. There's a certain prestige in headlining this "fan's festival," a status not included in traditional forms of analysis in the music industry, such as record sales and streams.</br>
-            </br>We first investigated how many times each artist on the lineup in the past 20 years played the festival in total. We found a large number of one(-and two) hit wonders. When we cut it down to three or more times played and split by year of first appearance, we found there to still be a large number of acts who played the festival three or four times in the past five years, suggesting a level of repitition and similarity in recent lineups.</br>
-        </br>We then defined a way to analyze this specific set of posters, who's layout has stayed overwhelmingly consistent over the past two decades. The resulting stage ranking analysis provided adequate inflection points for artists who played the festival four or more times, allowing us to programmatically create a path—a.k.a. career arc—for each.</br>
+            </br>We first investigated how many times each artist on the lineup in the past 20 years played the festival in total. We found a large number of one(-and two, and three) hit wonders.</br>
+        </br>We then defined a way to analyze this specific set of posters, which have a layout that has stayed overwhelmingly consistent over the past two decades. The resulting stage ranking analysis provided adequate inflection points for artists who played the festival four or more times, allowing us to programmatically create a path—a.k.a. career arc—for each.</br>
     </br>Looking at the spread of career arcs, there weren't any recognizable pattern when grouped by number of times played or year of first appearance. However, there were patterns in types of career arcs: We took a closer look at the "success story," "exponential rise," and "comeback" arcs.</p></div>
         </div>
 
@@ -261,6 +306,24 @@
             <div class=data-box><h3>Find the complete database of Reading and Leeds Festival lineups here, and explore all the lineups below.</h3></div>
             <div class=all-posters><embed src="img/all-posters.svg"></embed></div>
         </div>
+
+    <script>
+        $('.button').click(function(e) {
+            e.preventDefault();
+            setContent($(this));
+        });
+
+        // set content on load
+        $('.button.active').length && setContent($('.button.active'));
+
+        function setContent($el) {
+            $('.button').removeClass('active');
+        $('.container-arc').hide();
+            
+            $el.addClass('active');
+            $($el.data('rel')).show();
+        }
+    </script>
     </body>
 
 </html>
