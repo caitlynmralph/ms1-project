@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    width: 100vw;
 }
 
 body {
@@ -311,7 +312,7 @@ body {
     border-right: 5px solid #931F1D;
     box-sizing: border-box; */
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 }
 
 .container-14 {
@@ -405,7 +406,7 @@ body {
 
 .caption-text {
     position: absolute;
-    top: 37vh;
+    top: 45vh;
     left: 60vh;
     /* right: 40vh; */
     width: 40vw;
@@ -516,7 +517,7 @@ body {
 
 .biffy-line {
     position: absolute;
-    top: 45vh;
+    top: 55vh;
     left: 5vw;
     width: 90vw;
 }
@@ -551,6 +552,7 @@ body {
     left: 0vw;
     right:0vw;
     width: 100vw;
+    margin: 0px 0px 0px 0px;
     /* height: 2vh; */
 }
 
