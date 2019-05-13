@@ -1,0 +1,154 @@
+---
+title: "Major Studio 1 Project Report"
+author: "caitlyn ralph"
+date: "4/30/2019"
+output: 
+  rmarkdown::html_document:
+    theme: paper
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# From “Introducing” to Headlining:
+## Analyzing 20 years of Reading and Leeds Festival as a illustration of musician career arcs
+### Caitlyn Ralph
+
+
+#### Introduction
+
+  Iconic is an loose word to throw around in music—especially live music, for that matter—but it’s fair to say that the United Kingdom’s Reading Festival lives up to the word. The oldest popular music festival in history, it evolved from jazz roots in the 1960s to become the modern rock n’ roll powerhouse it is today.5 From Kurt Cobain’s wheelchair stunt to the Arctic Monkeys’ humble beginnings, the festival has played a quintessential role in many of the biggest rock acts over the years while maintaining its mantra as a “fans’ festival,” according to the BBC.15,14 
+
+  Reading Festival is now colloquially known as Reading and Leeds, a name-change prompted by the three-day event expanding to two locations in 1999 (Leeds is in North England, Reading is in South England).8 Since then, Reading and Leeds has cemented itself as a stronghold in the broad but recognizable indie, alternative, and rock genre.
+
+  In late 2018, the 1975 were announced as one of four headliners for Reading and Leeds 2019 (the Foo Fighters, twenty one pilots, and Post Malone make up the other three).11 It is their main stage debut. Three years ago, while supporting their second album, the band were offered—albeit not a headlining—but a main stage spot. They turned it down and opted to headline the smaller NME side stage. Apple Music Beats 1’s Matt Wilkinson asked lead singer Matty Healy about his band’s 2019 headlining set, which he said, “It's like after I got to 13 [years old], Christmas took a backseat, and the date on my calendar was Reading and Leeds.” He continued, “I mean, I’ve had some moments there—I saw Arcade Fire second on the Carling Stage in 2006.”1
+
+  The band’s history with the Festival does not end there: Just three years prior—in 2013, a month before their debut album released and shot to the top of the U.K. Charts—the 1975 played a modest set on the even smaller Festival Republic Stage.
+
+  Even though the 1975 themselves are a unique, modern case of skyrocketing fame in many other respects, they are in no way the only example of this kind of monumental ballot jump. Take the Arctic Monkeys, who “made a splash” on Leeds’ Carling Stage (a stage designated to unknown and unsigned acts, as aforementioned by Healy in reference to Arcade Fire) in 2005 and went on to “conquer the world” with their chillingly massive headline set in 2014.6 Or Catfish and the Bottlemen, who in two years went from guitar issues on the BBC Introducing Stage in 2013 to packing in an unforgettable crowd as one of 2015’s top acts on the NME/BBC Radio 1 Stage.12,3 As Frith, Brennan, Cloonan, and Webster stated in 2013, “...most present accounts of ‘the music industry’ over-privilege the recording sector at the expense of the sector in which most musicians in all genres have been located historically: the live arena.”7
+
+  All these stories point to a similar phenomenon: While there is no way to imply a causal relationship between bands’ success and Reading and Leeds Festival placement, it is interesting to map success alongside where they land on the ballot. If we are to assume “iconic” popular music festivals are a reflection of at least musical culture during a certain period of time (considering the locations for Reading and Leeds Festival can host over 150,000 people over the course of three days), we can also assume festival lineup arrangement is a tangible measurement of artist popularity—one that the algorithm for Billboard doesn’t necessarily take into account. 
+
+  Additionally, headlining one of the largest music festivals in a country outside of a musician’s home country (look at twenty one pilots in 2019) becomes an indicator of international, potentially global, success. Yet, in a concentrated country like the U.K., where live performance is an integral aspect of popular music culture, a headlining spot at Reading and Leeds holds a certain credibility—credibility comparable to, but not the same as, attaining a No. 1 album on the Official Charts.
+
+  There is also an innate historical quality to lineup posters. The lineups of past years act as a snapshot of popular music culture in a specific age—similar to how the Billboard Hot 200 captures what audiences are listening to each week for decades. However, while the Billboard algorithm has changed drastically over the years, the structure of a festival lineup (supporting acts followed by headlining acts) has stayed consistent, making it easy to compare past to present and to trace the longevity of musicians throughout history. The Wombats, for example, made their debut at Reading and Leeds in 2008. Eleven years later and the band still own a spot on the main stage (two years in row, for that matter).
+
+  It is not a significant jump to assume a popular music festival that hosts 150,000 people can act as a mirror of music culture in the host country. However, it is more of a leap to assume those music festivals are also a representation of greater society in the country at the time. Yet, in a climate where gender, race, and sexuality are rightfully surfacing in most conversations, festivals are subjected to the same critical eye as other cultural phenomenon. With 2019’s lineup announcement, Reading and Leeds continued to attract criticism for its gender breakdown, only booking one headliner who identified as a woman in the last 20 years (Queens of the Stone Age’s 2014 co-headliner Paramore—who, led by frontwoman Hayley Williams, played one of the most memorable sets in the festival’s history).4,14 While just one sliver of the larger conversation, it is intriguing to view—and potentially analyze—these lineups as a lens to measure inclusivity in music, popular culture, and society in general.
+
+##### Music Festivals in the United Kingdom
+
+  There is a slew of notable festivals around the world—Lollapalooza in the U.S., Summer Sonic in Japan, Pinkpop in the Netherlands, for example—but the U.K. is an interesting case study for a few reasons. The concentrated country hosts some of the biggest festivals in the world with some of the biggest acts in the world (Glastonbury, T In The Park turned TRNSMT Festival) over a short period of summer every year. 
+
+  Throughout the history of this small country, live music has played a pivotal role as a bridge between the music industry and the State, as well as positioning itself as an interesting reflection of society, economics, and class. “A history of live music is necessarily also a history of cultural politics,” as Firth et al. stated in their survey of live music history in Britain. They trace the sector back to the 1950s and the end of World War II: As the country was attempting to rebuild itself, the live music sector was rebuilding its structure, and, at the same time, creating an entirely new landscape. Notably, the new landscape bred a “do-it-yourself” ethos as the age of a “teenage consumer” took hold. 
+
+  This DIY ethos and connections to society and class pose intriguing implications for the idea of a “working class band,” a term still frequently used in conversations today. In a 2015 interview with NME (one of the most well-known and controversial British music publications), the lead singer of Catfish and the Bottlemen was asked if “working class bands” had a harder time, pointing to a quote from Oasis’ Noel Gallagher and the relevance of this ethos now. He replied: “I only know one way of doing it. We were together eight years, we lived in a van for seven of those years, and we played every single venue up and down the country—if it was 10 people or a hundred people or a thousand people, we play[ed] every single place and people never used to turn up.”13
+
+  Music festivals in the U.K. are a huge and tangible congregation of these ideas, held in one place for a series of days. In the same way a band can tour the entirety of the U.K. venue circuit, a band can move their way from a side stage to the main, pulling with it certain implications for their career, the state of live music, the industry, and society as a whole.
+
+##### Past Explorations in this World
+
+  Frith et al. conducted the first survey on the history of live music in the U.K. Broken into three books, they explore the reconstruction of the live music scene post-World War II through to the 21st century.7 However, their work is mostly narrative-driven, describing moments either around different bands (e.g., The Rolling Stones) or locations (e.g., Sheffield in November 1962) with little to no support of quantitative data.
+
+  While slightly different than the focus presented here, The Guardian explored the idea of analyzing festival lineups and musician popularity.2 Instead of using a festival lineup as an indication of popularity alone, they compared the 2014 Glastonbury lineup to Spotify streaming numbers. There was an interesting disparity between the lineup and the lineup determined by streaming—legacy acts, such as Dolly Parton, drop lower than their prescribed position, and newer acts, such as the 1975 (at the time), jump up.
+
+  As aforementioned, conversations of gender diversity on festival lineups has been an increasingly pressing topic the past few years. More directly related than The Guardian’s brief analysis, Pitchfork writers Rob Mitchum and Diego Garcia-Olano have published a series of articles on this topic, while also diving into the uniqueness of each roster and the most influential headliners of each season.
+
+  For their first piece, Mitchum and Garcia-Olano conducted an analysis of 2017 U.S. festival posters in order to pinpoint what they deemed the “winners” of that year’s circuit.9 They used a couple different methods of measurement, resulting in two different acts coming out on top: the Killers and Lorde. One tally looked at the average placement on the poster while the other added up “scores” based on how high up an article was on the poster (the Killers reigned in the former and Lorde reigned in the latter). This varied methodology approach illustrates how intricate of a process defining a measure for data extraction from festival posters can be. 
+
+  They also outlined a uniqueness score, to identify which festival in 2017 had a lineup that was most different than its competitors. Lastly, their analysis was completed with a gender breakdown, concluding 74% of the lineups in the poster dataset consisted of men. The following year, Mitchum and Garcia-Olano focused on the gender balance, finding only a four percent difference toward parity in 2018 compared to 2017.10
+
+  Aside from zeroing in on music festivals, there has been some work on mapping an individual artist’s touring schedule. A prime example is “How U2 Rocked All Over the World,” which passively visualized the legacy act’s extensive touring history on a reactive globe.16
+
+  However, save looking back a single year, these past projects have not specifically investigated deep into the history of these festivals, unveiling drastic rises and falls in ballot position and tracing specific stories intertwined in the lineups themselves over time.
+
+#### Question 
+
+  The goal of this project took into account the following:
+
+- Reading and Leeds Festival in the United Kingdom is the oldest music festival in the world and possesses a rich history for exploration
+
+- The United Kingdom is interesting because, while a relatively small country, it hosts some of the biggest music festivals in the world
+
+- The United Kingdom is also interesting because live music is an ingrained part of culture, bridging the separation between the music industry and the State
+
+- The live arena is constantly and unjustly left out of present accounts of the music industry
+
+- There are anecdotal cases of artists rising significantly on the Reading and Leeds Festival, reflecting their rise of success in the music industry in general
+
+- There is consistency in structure of music festival lineups over the years, allowing for comparative analysis over time
+
+- Past research in the data visualization sphere has not dove into the extensive history of one festival and tracked specific music paths on the lineups over time.
+
+  Therefore, the aim was to use twenty years of Reading and Leeds Festival lineups as an illustration of musician career arcs over time. The database was created using festival poster lineups since 1999, and the corpus of resulting artists were split by how many times each played the festival. Individual career paths were constructed based on their stage placement. After analyzing the set of paths, different patterns and classifications were seen in the data, visualized through different case studies of each type of path.
+
+#### Methodology
+
+  A summary of the methodology is as follows. There is no existing dataset of Reading and Leeds Festival poster lineups, so the first step was to create one. Afterwards, a narrative approach was combined with what was found in different cuts of the data. Prototypes were sketched and mocked up in Figma, and then eventually transferred to code. 
+	
+##### Source
+
+  The official Reading Festival and Leeds Festival websites archive lineup posters. For Reading Festival, the archive goes back to 1989. For Leeds Festival, the archive goes back to 1999. The posters are stored on separate pages in image form. Even since 1989, the organization of the posters are overwhelmingly similar. However, this similarity is particularly evident in the past 20 years, which is when Reading Festival expanded to include Leeds Festival as well.
+
+  To conceptualize the poster, it needs to be read like a spreadsheet. The three columns indicate each day of the lineup. The festival occurs over the course of three days during the same weekend in August, with the lineup days just alternating between the Reading and Leeds locations. Therefore, in 2019, the 1975 are headlining Friday in Reading and Saturday in Leeds.
+
+  The rows that shuffle down the lineup poster indicate each stage. They are listed in ranked order. All the components of the poster follow the same rule: higher up holds greater prominence and physical size while lower is reserved for smaller, emerging acts. The within-stage hierarchy is the same—however, it sometimes can get a bit blurry. For example, acts are often placed on the same level, and therefore the same rank.
+
+  The stages in the past 20 years have stayed as similar as the style of the poster—besides name and sponsorship changes, each have held a similar place in the lineup. At the bottom of the lineup is the BBC Music Introducing stage, which highlights the smallest—but most exciting—acts. Above that is the Festival Republic stage (formerly the Carling Stage), a place for slightly larger, but still up-and-coming acts. You can trace the beginning of the some of the biggest bands in the world to this stage—if they were starting to gain notoriety in the past twenty years and played Reading and Leeds, there's a good chance they started on this stage. This includes the 1975, twenty one pilots, Biffy Clyro, Tame Impala, Florence and the Machine, and Ed Sheeran, to name a few. Next are one or two genre-based stages: A dance stage and a hard rock/punk stage. Some years, these stage alternate days on the lineup. For example, in 2005, the Dance Arena was held for two days (Friday and Sunday in Reading, Friday and Saturday in Leeds) and the Radio 1 Lock Up Stage was held one day (Saturday in Reading and Sunday in Leeds). Second to top is the NME/BBC Radio 1 Stage (starting in 2019 just the BBC Radio 1 Stage) while the unnamed main stage is No. 1 in the ranking.
+
+##### Gathering
+
+  There were a couple options when entering the creation of this dataset. First, optical character recognition was considered. However, through new and past research, it was found that free OCR tools often do not capture ordering, which is the primary focus in this dataset for this project. Because of this, a manual approach was pursued.
+	
+  Each lineup year was given its own spreadsheet, which was eventually aggregated into a master sheet. Artists were catalogued row-by-row and different variables were categorized in the columns. These variables were either at the poster or the artist-level and included:
+	
+- poster year (so when it was aggregated into a master sheet, 
+the lineup year was still known), artist name, 
+- if the artist was on a single line or a shared line, 
+- the stage the artist was one, 
+- the artist’s rank on the entire poster (from top to bottom regardless of stage), 
+- the artist’s rank on an individual stage (from the top of the stage to the bottom), 
+- the stage’s rank on the poster, 
+- if the artist was a headliner, 
+- if the artist’s logo was included on the poster, 
+- what color the artist name was written in, 
+- what Reading date the artist played, 
+- what Leeds date the artist played, 
+- the color of the poster, 
+- if there was one poster for Reading and Leeds or if it was split into two, 
+- if the poster had the arrow motif (present on later posters after X) or the spike motif (present on earlier posters), 
+the number of stages that year, 
+- and the number of artists on the whole lineup that year.
+
+	The posters were catalogued one-by-one. The final dataset can be found on Github here. At the end of this project, there are a couple outstanding data tasks that did not affect the final piece but could be worked on if the dataset is to be used again. Most importantly, the 2019 lineup is still being announced, and more artists were added since the poster was catalogued, so it needs to be updated. Secondly, the goal would be bring in another person to review the database for accuracy.
+	
+##### Processing
+
+  Individual year lineups were aggregated into one spreadsheet for processing. The primary aggregation that occurred was summing appearances at the festival by artist. This allowed the spread of appearances to be analyzed, especially since number of appearances dictates the artists arc throughout their time at the festival.
+
+  More processing occurred to organize artists data by stage ranking over time. The resulting CSVs contained artist name by their stage rankings, split by year played or number of times played.
+
+##### Website Walkthrough
+
+#### Conclusion
+
+##### Future Directions
+
+#### Bibliography
+
+1. 1, Beats. "Matty Healy: The 1975, Drug Addiction and Glastonbury | Beats 1 | Apple Music." YouTube. November 30, 2018. Accessed March 2019. https://www.youtube.com/watch?v=gmZCHCWwp2I.
+2. Allen, Paddy, and Guardian Music. "How Would the Glastonbury Line-up Look If the Running Order Was Decided by Streaming Numbers?" The Guardian. Accessed March 2019. https://www.theguardian.com/music/ng-interactive/2014/jun/20/glastonbury-2014-line-up-by-streaming-numbers.
+3. BBC. "Catfish and the Bottlemen - Pacifier (Reading 2015)." YouTube. August 29, 2015. Accessed March 2019. https://www.youtube.com/watch?v=Xi0S2xKXSzg.
+4. "By Refusing to Book Female Headliners, Reading and Leeds Are Keeping Themselves on the Wrong Side of History." The Independent. November 21, 2018. Accessed March 2019. https://www.independent.co.uk/arts-entertainment/music/features/reading-leeds-headliners-women-lineup-music-industry-sexism-foo-fighters-1975-a8644591.html.
+5. Chilton, Martin. "Reading Festival, a History: From Jazz to Rock." The Telegraph. August 27, 2015. Accessed March 2019. https://www.telegraph.co.uk/music/jazz/reading-festival-history-and-timeline/.
+6. Ferdinando, Stephen. "The Greatest Reading And Leeds Festival Moments." Radio X. March 01, 2016. Accessed March 2019. https://www.radiox.co.uk/festivals/reading-and-leeds/the-greatest-reading-leeds-festival-moments-ever/.
+7. Frith, Simon, Matt Brennan, Emma Webster, and Martin Cloonan. The History of Live Music in Britain. London: Routledge, 2016.
+8. "History." Reading Festival. Accessed March 2019. https://www.readingfestival.com/history.
+9. Mitchum, Rob, Diego Garcia-Olano, Rob Mitchum, and Diego Garcia-Olano. "Are Music Festival Lineups Getting Worse?" Pitchfork. April 18, 2017. Accessed March 2019. https://pitchfork.com/features/festival-report/10059-are-music-festival-lineups-getting-worse/.
+10. Mitchum, Rob, Diego Garcia-Olano, Rob Mitchum, and Diego Garcia-Olano. "Tracking the Gender Balance of This Year's Music Festival Lineups." Pitchfork. May 01, 2018. Accessed March 2019. https://pitchfork.com/features/festival-report/tracking-the-gender-balance-of-this-years-music-festival-lineups/.
+11. Moore, Sam, and Sam Moore. "Reading & Leeds Festival Announce Headliners and First Acts for 2019." NME. November 21, 2018. Accessed March 2019. https://www.nme.com/news/music/reading-leeds-2019-festival-line-up-tickets-2404763.
+12. Music, BBC. "Catfish and The Bottlemen - Homesick at Reading Festival 2013." YouTube. December 12, 2013. Accessed March 2019. https://www.youtube.com/watch?v=pRjymT3jcVY.
+13. NME. "Catfish And The Bottlemen: 'You Can Do Whatever You Want Whether You're Working Class Or Not'." YouTube. February 12, 2015. Accessed March 2019. https://www.youtube.com/watch?v=iEJrcF0JfAI.
+14. "Reading Leeds: The 12 Most Startling Moments in the History of the Festival - BBC Music." BBC News. August 21, 2017. Accessed March 2019. https://www.bbc.co.uk/music/articles/550e5cef-9ac0-42b9-a141-2aa72889648e.
+15. "Seven Ages of Rock - Events - Nirvana Headline Reading Festival." BBC. Accessed March 2019. https://www.bbc.co.uk/music/sevenages/events/alternative-rock/nirvana-headline-reading-festival/.
+16. "U2 Rocking All over the World." U2 Rocking All over the World. Accessed March 2019. http://u2allovertheworld.com/.
