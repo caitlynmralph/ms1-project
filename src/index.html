@@ -62,6 +62,15 @@
                 font-size: 0.8em;
             }
 
+            .label-text-patterns {
+                fill: #514843;
+                font-family: 'Gilda Display', serif;
+                font-style: normal;
+                font-weight: bold;
+                text-align: center;
+                font-size: 0.7em;
+            }
+
             .button.active {
                 color: #F9F9F9;
             }
@@ -69,7 +78,7 @@
             .button {
                 color: #F9F9F9;
                 background: #931F1D;
-                opacity: 0.5;
+                opacity: 0.7;
                 font-family: News Cycle;
                 font-style: normal;
                 font-weight: bold;
@@ -242,46 +251,61 @@
         <div class=pre-button>
                 <div class=middle><p>Using each artists' stage rankings, we can programtically generate these paths.</br>
                 </br>
-                Toggle between two different views of the corpus of arcs: one ordered by <span style="background:#931F1D;color:#F9F9F9">number of times played</span> and the other ordered by <span style="background:#931F1D;color:#F9F9F9">year of first appearance</span>.</p></div>
+                Shown first is a breakdown of arc patterns, such as the ones detailed above. Toggle between two more views of the corpus of arcs: one ordered by <span style="background:#931F1D;color:#F9F9F9">number of times played</span> and the other ordered by <span style="background:#931F1D;color:#F9F9F9">year of first appearance</span>.</p></div>
             </div>
     
             <div class="flr-wrap">
                 <ul style="padding:0rem 0rem 1rem 0rem;margin: 0rem 0rem 0rem 0rem; list-style: none; text-align: center">
-                    <li><a class="button active" data-rel="#content-a" href="#">Times Played</a></li>
+                    <li><a class="button active" data-rel="#content-a" href="#">Patterns</a></li>
                     </br>
                     </br>
-                    <li><a class="button" data-rel="#content-b" href="#">Year of First Appearance</a></li>
+                    <li><a class="button" data-rel="#content-b" href="#">Times Played</a></li>
+                    </br>
+                    </br>
+                    <li><a class="button" data-rel="#content-c" href="#">Year of First Appearance</a></li>
                 </ul>
                 
                 <div class="flr-inner">
-                    <div class=container-arc id="content-a">
+                        <div class=container-arc id="content-a">
+                            <div class=middle><p>Along with the three patterns already identified in the case studies, two more were found: the downward arc, which consists of artists who are falling in rank, and the consistent arc, which consists of artists who have been consistent in rank throughout their entire time on the Festival.</p></div>
+                            <div class=middle><span style="background:#931F1D;color:#F9F9F9;margin-right:2em;"> STEADY </span>    <span style="background:#931F1D;color:#F9F9F9;margin-right:2em;"> QUICK </span>   <span style="background:#931F1D;color:#F9F9F9;margin-right:2em;"> COMEBACK </span>    <span style="background:#931F1D;color:#F9F9F9;margin-right:2em;"> DOWNWARD </span>    <span style="background:#931F1D;color:#F9F9F9;"> CONSISTENT </span></div>
+                            <div class=sparklines>
+                            <svg width=100% height=170rem id="steady"></svg>
+                            <script src=arc-steady.js></script>
+                            <svg width=0rem id="quick"></svg>
+                            <script src=arc-quick.js></script>
+                            <svg width=0rem id="comeback"></svg>
+                            <script src=arc-comeback.js></script>
+                            <svg width=0rem id="downward"></svg>
+                            <script src=arc-downward.js></script>
+                            <svg width=0rem id="consistent"></svg>
+                            <script src=arc-consistent.js></script>
+                        </div>
+                        </div>
+                    <div class=container-arc id="content-b">
                         <div class=middle><p>Here’s the arc of everyone in our artist corpus, ordered left to right by eight times played to four times played.</p></div>
-                        <div class=middle><p>8 Times Played</p></div>
-                        <div class=middle><p>4 Times Played</p></div>
                         <div class=sparklines>
-                        <svg height=300vh id="eight"></svg>
+                        <svg width=100% height=200rem id="eight"></svg>
                         <script src=arc-8.js></script>
-                        <svg id="seven"></svg>
+                        <svg width=0rem id="seven"></svg>
                         <script src=arc-7.js></script>
-                        <svg id="six"></svg>
+                        <svg width=0rem id="six"></svg>
                         <script src=arc-6.js></script>
-                        <svg id="five"></svg>
+                        <svg width=0rem id="five"></svg>
                         <script src=arc-5.js></script>
-                        <svg id="four"></svg>
+                        <svg width=0rem id="four"></svg>
                         <script src=arc-4.js></script></div>
                     </div>
-                    <div class=container-arc id="content-b">
+                    <div class=container-arc id="content-c">
                         <div class=middle><p>While there seem to be consistent patterns in types of arcs, there isn't an immediate pattern in the ordering by times played. Let's instead order by time of first appearance, again grouping by every five years. Those on the far left had their first performance before 2005, and those on the far right had their first performance after 2015.</p></div>
-                        <div class=middle><p>First Performance Before 2005</p></div>
-                        <div class=middle><p>First Performance After 2019</p></div>
                         <div class=sparklines>
-                        <svg height=380vh id="earliest"></svg>
+                        <svg width=100% height=180rem id="earliest"></svg>
                         <script src=arc-2005.js></script>
-                        <svg id="early"></svg>
+                        <svg width=0rem id="early"></svg>
                         <script src=arc-2010.js></script>
-                        <svg id="new"></svg>
+                        <svg width=0rem id="new"></svg>
                         <script src=arc-2015.js></script>
-                        <svg id="newest"></svg>
+                        <svg width=0rem id="newest"></svg>
                         <script src=arc-2019.js></script></div>
                     </div>
                 </div>

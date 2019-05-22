@@ -156,7 +156,9 @@ body {
 
 .sparklines {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    padding-top: 0rem;
+    margin-top: -9rem;
 }
 
 .container-conclusion {
