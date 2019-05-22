@@ -7,7 +7,7 @@ var tooltips = ["zero","one","two",
 "Biffy Clyro, Enter Shikari"]
 
 var chart2 = d3.select("#chart-2"),
-    margin2 = {top: 300, right: 50, bottom: 100, left: 180},
+    margin2 = {top: 150, right: 50, bottom: 25, left: 180},
     width2 = +chart2.attr("width") - margin2.left - margin2.right,
     height2 = +chart2.attr("height") - margin2.top - margin2.bottom;
 
@@ -15,18 +15,13 @@ var x2 = d3.scaleBand().rangeRound([0, width2]).padding(0.1),
     y2 = d3.scaleLinear().rangeRound([height2, 0]);
 
 var g2 = chart2.append("g")
-    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var svgContainer = d3.select('body');
-// var svg2 = svgContainer.append('svg')
 var div = svgContainer
       .append('div')
       .attr("class", "tooltip")				
       .style("opacity", 0);	
-
-var t = d3.transition()
-    .duration(750)
-    .ease(d3.easeLinear);
 
 d3.csv("data/3-artist-counts.csv")
   	.then((data) => {
@@ -41,54 +36,54 @@ d3.csv("data/3-artist-counts.csv")
         y2.domain([0, d3.max(data, function(d) { return d.artists; })]);
 
         g2.append("g")
-            .attr("class","axis-text")
-            .attr("transform", "translate(0," + height2 + ")")
+          .attr("class","axis-text")
+            .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x2))
             .call(g => g.select(".domain").remove())
             .append("text")
-                .attr("x",150)
-                .attr("y","45")
+                .attr("x",175)
+                .attr("y",45)
                 .attr("class","axis-text")
                 .style("fill","black")
                 .text("Times Played")
 
         g2.append("g")
             .attr("class","axis-text")
-            .call(d3.axisLeft(y2).ticks(4))
+            .call(d3.axisLeft(y2).ticks(10))
             .call(g => g.select(".domain").remove())
           .append("text")
             .attr("transform", "rotate(-90)")
             .attr("y",-50)
-            .attr("x",-20)
+            .attr("x",-150)
             // .attr("text-anchor", "end")
             .attr("class","axis-text")
             .style("fill","black")
             .text("Number of Artists");
 
-        g2.selectAll(".bar")
-          .data(data)
-          .enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", function(d) { return x2(d.count); })
-            .attr("y", function(d) { return y2(d.artists); })
-            .attr("width", x2.bandwidth())
-            .attr("height", function(d) { return height2 - y2(d.artists); })
-            .on("mouseover", function(d) {
-                console.log(d.count)		
-                div.transition()		
-                    .duration(200)		
-                    .style("opacity", .9);		
-                div.html(tooltips[d.count])
-                    .style("left", d3.event.pageX + "px")		
-                    .style("top", (d3.event.pageY - 28) + "px")
-                    .style("width","600px")	
-            })					
-            .on("mouseout", function(d) {		
-                div.transition()		
-                    .duration(500)		
-                    .style("opacity", 0);	
-            });
-    })
-    .catch((error) => {
-    		throw error;
-    });
+            g2.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+              .attr("class", "bar")
+              .attr("x", function(d) { return x2(d.count); })
+              .attr("y", function(d) { return y2(d.artists); })
+              .attr("width", x2.bandwidth())
+              .attr("height", function(d) { return height2 - y2(d.artists); })
+              .on("mouseover", function(d) {
+                  console.log(d.count)		
+                  div.transition()		
+                      .duration(200)		
+                      .style("opacity", .9);		
+                  div.html(tooltips[d.count])
+                      .style("left", d3.event.pageX + "px")		
+                      .style("top", (d3.event.pageY - 28) + "px")
+                      .style("width","600px")	
+              })					
+              .on("mouseout", function(d) {		
+                  div.transition()		
+                      .duration(500)		
+                      .style("opacity", 0);	
+              });
+      })
+      .catch((error) => {
+          throw error;
+      });
